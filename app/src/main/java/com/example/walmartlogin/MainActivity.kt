@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
     fun submitSignIn(){
 
-        var res = false
+        var res = true
         val email = emailEditText?.text ?: ""
         val password = passwordEditText?.text ?: ""
 
