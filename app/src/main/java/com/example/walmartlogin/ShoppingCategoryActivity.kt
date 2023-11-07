@@ -3,6 +3,7 @@ package com.example.walmartlogin
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 
 class ShoppingCategoryActivity : AppCompatActivity() {
@@ -10,6 +11,8 @@ class ShoppingCategoryActivity : AppCompatActivity() {
     lateinit var linearLayoutF2: LinearLayout
     lateinit var linearLayoutF3: LinearLayout
     lateinit var linearLayoutF4: LinearLayout
+
+    lateinit var textViewEmail: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +26,10 @@ class ShoppingCategoryActivity : AppCompatActivity() {
         linearLayoutF3.setOnClickListener { chooseItem() }
         linearLayoutF4 = findViewById(R.id.f4)
         linearLayoutF4.setOnClickListener { chooseItem() }
+
+        textViewEmail = findViewById(R.id.textView_email)
+
+        textViewEmail.text = "Welcome ${intent.getStringExtra("email")}"
     }
 
     fun chooseItem() {
